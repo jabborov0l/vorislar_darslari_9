@@ -75,7 +75,7 @@ AB = int(input("AB ni kiriting"))
 BC = int(input("BC ni kiriting"))
 CA = int(input("CA ni kiriting"))
 
-# AC va BC kesmalarni uzunligi va yig'indisini hisoblash
+# AC va BC kesmalarni uzunligi va yig'indisini hisoblash.
 AC = AB + BC
 BC = AC - AB
 
