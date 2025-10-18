@@ -44,9 +44,12 @@ import math
 # print("o'rta geometrigi : o_geometrik qiymati = ", o_geom )
 
 ## nolga teng bo'lmagan ikkita yig'indisini ko'paytmasini va har birinng moduli aniqlansin.
-a = int(input("0 ga teng bo'lmagan 1-sonni  kiriting ")) 
-b = int(input("0 ga teng bo'lmagan 2-sonni kiriting "))
-c = math.sqrt(a * a + b *b)
-print(("0 ga teng bo'lmagan ikki sonni ko'paytmasi : o_geometrik qiymati =",))
+# a = int(input("0 ga teng bo'lmagan 1-sonni  kiriting ")) 
+# b = int(input("0 ga teng bo'lmagan 2-sonni kiriting "))
+# c = math.sqrt(a * a + b *b)
+# print(("0 ga teng bo'lmagan ikki sonni ko'paytmasi : o_geometrik qiymati =",))
+
+
+## To'g'ri uchburchakning katetlari a va b berilgan. Uning gipotenuzasi 
 
 
