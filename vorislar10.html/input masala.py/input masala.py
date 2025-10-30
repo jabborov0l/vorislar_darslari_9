@@ -53,3 +53,39 @@ import math
 ## To'g'ri uchburchakning katetlari a va b berilgan. Uning gipotenuzasi 
 
 
+# davlatlar =["O'zbekiston, Fransiya, Dubai, Argentina"]
+# print("davlatlar")
+
+# print(sorted(davlatlar))
+
+
+## ro'yxatdagi elementlar sonini hisoblang
+# """
+# juft_sonlar = list(range(120, 1201, 2))
+# print(juft_sonlar)
+# print("ro'yxatdagi elementlar soni :", len(juft_sonlar))
+# """
+
+##ro'yxatni bowidan va oxiridan 20ta so'zni konsolga chiqaring
+# juft_sonlar = list(range(120, 1201, 2))
+# print(juft_sonlar)
+# print("ro'yxatni bowidan va oxiridan 20ta so'zni konsolga chiqaring")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
