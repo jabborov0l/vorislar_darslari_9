@@ -1,0 +1,337 @@
+> JABBOROV:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jabborov Elbek — Portfolio</title>
+  <meta name="description" content="Jabborov Elbek — o'quvchi va yosh dasturchi. HTML, CSS, JavaScript, Python. Al-Xorazmiy loyihasi ishtirokchisi." />
+  <link rel="icon" href="c:\Users\User-3\Downloads\5467601549900513569.jpg">
+  <style>
+    /* ====== Basic reset ====== */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.6;color:#0f172a;background:linear-gradient(180deg,#f8fafc 0%, #eef2ff 100%);
+      -webkit-font-smoothing:antialiased;padding:20px;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ====== Container ====== */
+    .container{max-width:1000px;margin:0 auto;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.08);overflow:hidden}
+
+    /* ====== Header ====== */
+    header{display:flex;align-items:center;justify-content:space-between;padding:28px 32px;border-bottom:1px solid #eef2ff;background:linear-gradient(90deg, #fff, #fbfdff)}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{
+      width:78px;height:78px;border-radius:12px;overflow:hidden;border:2px solid #e6eef8;background:#eaf2ff;flex-shrink:0;
+    }
+    .brand h1{font-size:20px;color:#0b1220}
+    .brand p{font-size:13px;color:#475569;margin-top:2px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;border:1px solid transparent;background:#eef2ff;font-weight:600;font-size:14px}
+    .btn.primary{background:#0ea5a3;color:white;border-color:rgba(0,0,0,0.04)}
+    .btn.ghost{background:transparent;border-color:transparent;color:#0b1220}
+
+    /* ====== Hero ====== */
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;padding:30px 32px}
+    .intro h2{font-size:26px;color:#0b1220;margin-bottom:8px}
+    .intro p{color:#334155;margin-bottom:16px}
+    .stats{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:#fbfdff;padding:12px 14px;border-radius:10px;border:1px solid #eef2ff;min-width:120px}
+    .card small{color:#64748b;display:block;font-size:12px}
+    .card strong{display:block;margin-top:6px;color:#0b1220;font-size:16px}
+
+    /* ====== Sidebar / Contact box ====== */
+    .contact-card{background:linear-gradient(180deg,#0ea5a3, #0891b2);color:#fff;padding:18px;border-radius:12px}
+    .contact-card h3{font-size:18px;margin-bottom:6px}
+    .contact-card p{font-size:14px;opacity:0.95;margin-bottom:10px}
+    .contact-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:rgba(255,255,255,0.12);padding:8px 10px;border-radius:8px;font-weight:600;cursor:pointer}
+
+    /* ====== Sections ====== */
+    section{padding:22px 32px;border-top:1px solid #f1f5f9}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .section-title h3{font-size:18px;color:#0b1220}
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline-item{background:#fff;padding:12px;border-radius:10px;border:1px solid #eef2ff}
+    .timeline-item h4{font-size:15px;margin-bottom:6px}
+    .timeline-item p{font-size:13px;color:#475569}
+
+    /* ====== Skills ====== */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .skill{background:#fbfdff;padding:10px;border-radius:10px;border:1px solid #eef2ff}
+    .skill .meta{display:flex;justify-content:space-between;margin-bottom:8px}
+    .bar{height:10px;background:#e6eef8;border-radius:8px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,#06b6d4,#7dd3fc);width:0%}
+
+    /* ====== Projects ====== */
+
+> JABBOROV:
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{background:#fff;padding:12px;border-radius:10px;border:1px solid #eef2ff;display:flex;gap:10px;align-items:flex-start}
+    .project .thumb{width:86px;height:64px;border-radius:8px;background:#f8fafc;flex-shrink:0}
+    .project h4{font-size:15px;margin-bottom:6px}
+
+    /* ====== Footer ====== */
+    footer{padding:18px 32px;background:linear-gradient(90deg,#fbfdff,#fff);border-top:1px solid #eef2ff;text-align:center;color:#64748b;font-size:13px}
+
+    /* ====== Responsive ====== */
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .projects-grid{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      nav{width:100%;justify-content:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">
+          <!-- replace src with your profile photo -->
+          <img src="c:\Users\User-3\Downloads\5467601549900513569.jpg" alt="Jabborov Elbek">
+        </div>
+        <div>
+          <h1>Jabborov Elbek</h1>
+          <p>9-sinf o'quvchisi · Dasturlashga qiziqadi</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn ghost" href="#about">About</a>
+        <a class="btn ghost" href="#projects">Projects</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Bog'lanish</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="intro">
+        <h2>Salom — men Jabborov Elbek 👋</h2>
+        <p>Men Xorazm viloyati Xonqa tumani 46-maktabda 9-sinf o‘quvchisiman. Dasturlash va ingliz tiliga qiziqaman. Hozircha HTML, CSS, JavaScript va Python bilan ishlayman.</p>
+
+        <div class="stats" aria-hidden="true">
+          <div class="card">
+            <small>Ta'lim</small>
+            <strong>46-maktab, 9-sinf</strong>
+          </div>
+          <div class="card">
+            <small>Loyihalar</small>
+            <strong>Al-Xorazmiy (2024–hozir)</strong>
+          </div>
+          <div class="card">
+            <small>Sertifikat</small>
+            <strong>Coursera — ChatGPT</strong>
+          </div>
+        </div>
+      </div>
+
+      <aside class="contact-card" id="contactCard" aria-labelledby="contactTitle">
+        <h3 id="contactTitle">Bog'lanish</h3>
+        <p>Email: <strong id="emailText">masharipovumid00@gmail.com</strong></p>
+        <div class="contact-actions">
+          <button class="chip" id="copyEmailBtn" title="Emailni nusxa olish">Emailni nusxa olish</button>
+          <a class="chip" href="mailto:masharipovumid00@gmail.com" title="Email yuborish">Email yuborish</a>
+          <a class="chip" href="#projects" title="Loyihalar">Loyihalar</a>
+        </div>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.12)">
+
+        <p style="font-size:13px;opacity:0.95">Joylashuv: Xonqa tumani, Xorazm viloyati</p>
+        <p style="font-size:13px;opacity:0.95">Qiziqishlar: Ingliz tili, Dasturlash</p>
+      </aside>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-title">
+        <h3>About / Men haqimda</h3>
+        <small style="color:#94a3b8">Jabborov Elbek — o'quvchi</small>
+      </div>
+      <p style="margin-bottom:12px;color:#334155">
+        Men 2017-yilda 1-sinfga qabul qilinganman. Hozir 9-sinfda o‘qiyman va 2028-yilgacha maktabda o‘qish rejam mavjud. 2024-yildan buyon <strong>Al-Xorazmiy</strong> loyihasida faol ishtirok etyapman, turli kodlash mashqlarida qatnashaman va onlayn kurslar orqali bilimlarimni kengaytirmoqdaman.
+      </p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+
+> JABBOROV:
+<div style="flex:1;min-width:240px">
+          <h4 style="margin-bottom:8px">Ta'lim</h4>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>46-sonli maktab, Xonqa</h4>
+              <p>1-sinf (2017) — 2028 yilgacha o‘qish (hozir 9-sinf)</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Al-Xorazmiy loyihasi</h4>
+              <p>2024 — hozirgacha: loyihada qatnashuvchi, dasturlash bo‘yicha mashg‘ulotlar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:240px">
+          <h4 style="margin-bottom:8px">Sertifikat va qiziqishlar</h4>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Coursera — ChatGPT Kursi</h4>
+              <p>ChatGPT va AI bilan ishlash bo‘yicha sertifikat olganman.</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Qiziqishlar</h4>
+              <p>Ingliz tili, Dasturlash, yangi texnologiyalar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-title">
+        <h3>Ko‘nikmalar</h3>
+        <small style="color:#94a3b8">Texnik va dasturlash ko‘nikmalari</small>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="meta"><span>HTML</span><strong>85%</strong></div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="meta"><span>CSS</span><strong>80%</strong></div>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="meta"><span>JavaScript</span><strong>70%</strong></div>
+          <div class="bar"><i style="width:70%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="meta"><span>Python</span><strong>65%</strong></div>
+          <div class="bar"><i style="width:65%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-title">
+        <h3>Loyihalar</h3>
+        <small style="color:#94a3b8">Ba'zi namunaviy loyihalar (siz o'zgartirishingiz mumkin)</small>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <div class="thumb" aria-hidden="true">
+            <img src="https://via.placeholder.com/300x200.png?text=Web+site" alt="Project 1 thumb">
+          </div>
+          <div>
+            <h4>Shaxsiy portfolio (bu sayt)</h4>
+            <p style="font-size:13px;color:#475569;margin-bottom:6px">HTML/CSS/JS orqali yaratilgan responsiv bir sahifali portfolio. Loyihani GitHub-ga joylab, demo orqali namoyish qilishingiz mumkin.</p>
+            <div style="display:flex;gap:8px;">
+              <a class="btn ghost" href="#" onclick="alert('GitHub linkini qo\\'shing')">GitHub</a>
+              <a class="btn ghost" href="#" onclick="alert('Demo yo\\'lini qo\\'shing')">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="thumb" aria-hidden="true">
+            <img src="https://via.placeholder.com/300x200.png?text=JS+Project" alt="Project 2 thumb">
+          </div>
+          <div>
+            <h4>JavaScript mini-o'yin</h4>
+            <p style="font-size:13px;color:#475569;margin-bottom:6px">HTML/CSS/JS bilan oddiy interaktiv o'yin — DOM manipulyatsiya va hodisalar bilan ishlashni o'rgatadi.</p>
+            <div style="display:flex;gap:8px;">
+              <a class="btn ghost" href="#" onclick="alert('GitHub linkini qo\\'shing')">GitHub</a>
+              <a class="btn ghost" href="#" onclick="alert('Demo yo\\'lini qo\\'shing')">Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+> JABBOROV:
+<!-- Contact form (simple) -->
+    <section id="contact" aria-label="Contact">
+      <div class="section-title">
+        <h3>Kontakt & Murojaat</h3>
+        <small style="color:#94a3b8">Email orqali bog'laning</small>
+      </div>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <p style="color:#334155;margin-bottom:8px">Email: <strong>masharipovumid00@gmail.com</strong></p>
+          <p style="color:#64748b;font-size:14px;margin-bottom:12px">Yoki quyidagi shakl orqali oddiy xabar yuboring (bu brauzerda mailto orqali ochiladi):</p>
+          <form id="contactForm" onsubmit="sendMail(event)" style="display:flex;flex-direction:column;gap:8px">
+            <input type="text" id="name" placeholder="Ismingiz" required style="padding:10px;border-radius:8px;border:1px solid #eef2ff">
+            <input type="email" id="email" placeholder="Email (siznik)" required style="padding:10px;border-radius:8px;border:1px solid #eef2ff">
+            <textarea id="message" placeholder="Xabaringiz..." rows="4" required style="padding:10px;border-radius:8px;border:1px solid #eef2ff"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn primary" type="submit">Xabar yuborish</button>
+              <button class="btn ghost" type="button" onclick="clearForm()">Tozalash</button>
+            </div>
+          </form>
+        </div>
+
+        <div style="flex:1;min-width:260px">
+          <h4 style="margin-bottom:8px">Qisqacha — kimman</h4>
+          <p style="color:#475569;margin-bottom:8px">Jabborov Elbek — Xonqa tumani, Xorazm viloyati, 46-maktab 9-sinf o'quvchisi. Dasturlashni o'rganib, onlayn kurslar va loyihalarda qatnashaman.</p>
+
+          <h4 style="margin-bottom:8px">Tez ma'lumot</h4>
+          <ul style="color:#475569;margin-left:18px">
+            <li>HTML · CSS · JavaScript · Python</li>
+            <li>Al-Xorazmiy loyihasi ishtirokchisi (2024—hozir)</li>
+            <li>Coursera sertifikati — ChatGPT kursi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Jabborov Elbek — Barcha huquqlar himoyalangan.
+    </footer>
+  </div>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy email to clipboard
+    document.getElementById('copyEmailBtn').addEventListener('click', async () => {
+      const email = document.getElementById('emailText').textContent;
+      try {
+        await navigator.clipboard.writeText(email);
+        alert('Email nusxa olindi: ' + email);
+      } catch (e) {
+        prompt('Iltimos, quyidagi emailni nusxa oling:', email);
+      }
+    });
+
+    // Simple contact form handler: opens default mail client with content
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Portfolio orqali murojaat: ' + name);
+      const body = encodeURIComponent('Ism: ' + name + '\\nEmail: ' + email + '\\n\\n' + message);
+      const mailto = 'mailto:masharipovumid00@gmail.com?subject=' + subject + '&body=' + body;
+      // open mail client
+      window.location.href = mailto;
+    }
+
+    function clearForm(){
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }
+  </script>
+</body>
+</html>
