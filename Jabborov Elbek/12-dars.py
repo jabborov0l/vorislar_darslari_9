@@ -22,6 +22,7 @@
 #     print(i)
 # print(royhat)
 # print(len(royhat))
+
 #For4.
 # narx = int(input("1 kg konfet narxini kiriting"))
 # for i in range(1,11):
